@@ -10,13 +10,16 @@ function App() {
     <>
     <Router>
       <NavBar/>
+      
       <Routes>
-        <Route path='/' exact element={<Movies />}/>
+        <Route path='/' exact element={
+        <>
+        <Banner/>
+        <Movies />
+        </>
+        }/>
         <Route path='/fav' exact element={<Favourites name='vishal'/>}/>
       </Routes>
-      {/* <Banner/>
-      <Movies/> */}
-      {/* <Favourites/> */}
     </Router>
     
     </>
